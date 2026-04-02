@@ -156,6 +156,33 @@ Thanks!
 
 **Note:** Installation differs by platform. Claude Code or Cursor have built-in plugin marketplaces. Codex and OpenCode require manual setup.
 
+### Install via skills.sh
+
+If you want to distribute this fork through the `skills.sh` ecosystem, the most portable install path is the `skills` CLI.
+
+Install the whole repository as a skill collection:
+
+```bash
+npx skills add https://github.com/faiz-gear/superpowers-contract-patch
+```
+
+Install one specific patch skill from this repository:
+
+```bash
+npx skills add https://github.com/faiz-gear/superpowers-contract-patch --skill recall-contract-context
+npx skills add https://github.com/faiz-gear/superpowers-contract-patch --skill backend-contract-exit-gate
+npx skills add https://github.com/faiz-gear/superpowers-contract-patch --skill frontend-contract-entry-gate
+npx skills add https://github.com/faiz-gear/superpowers-contract-patch --skill compound-knowledge-summary
+```
+
+If your `skills` CLI setup supports owner/repo shorthand, this may also work:
+
+```bash
+npx skills add faiz-gear/superpowers-contract-patch
+```
+
+After installation, restart your agent session so the new skills are picked up.
+
 ### Claude Code Official Marketplace
 
 Superpowers is available via the [official Claude plugin marketplace](https://claude.com/plugins/superpowers)
